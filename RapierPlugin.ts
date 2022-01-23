@@ -14,6 +14,7 @@ import { PhysicsRaycastResult } from "babylonjs/Physics/physicsRaycastResult"
 /**
 //https://doc.babylonjs.com/divingDeeper/physics/usingPhysicsEngine
 //https://github.com/BabylonJS/Documentation/blob/master/content/How_To/Physics/Using_The_Physics_Engine.md
+//https://github.com/BabylonJSGuide/Physics
 Each physics engine has different types of Impostors. The following table shows what each engine supports, and what it uses to simulate the missing impostors
 | Impostor Type | Cannon.js | Oimo.js | Energy.js | Ammo.js | Notes   |
 |---------------|-----------|---------|-----------|---------|---------|
