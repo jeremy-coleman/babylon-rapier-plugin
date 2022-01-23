@@ -205,9 +205,10 @@ class RapierPlugin implements IPhysicsEnginePlugin {
 //these 4 methods were in the 10 mandatory methods stated in the docs but not present in the IPhysicsEnginePlugin interface
 //applyImpulse(mesh, force, contactPoint){}
 //setGravity(gravity){}
-//dispose(){}//isSupported(){}
+//dispose(){}
+//isSupported(){}
 
-//these are all the methods mentioned in the docs
+//these are all the methods stated as mandatory in the docs
 // initialize()
 // setGravity(gravity)
 // runOneStep(delta)
