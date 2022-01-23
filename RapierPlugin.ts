@@ -10,6 +10,23 @@ import type {
 } from "babylonjs"
 import { PhysicsRaycastResult } from "babylonjs/Physics/physicsRaycastResult"
 
+//enum used in the registerMesh method
+/**
+//https://doc.babylonjs.com/divingDeeper/physics/usingPhysicsEngine
+//https://github.com/BabylonJS/Documentation/blob/master/content/How_To/Physics/Using_The_Physics_Engine.md
+Each physics engine has different types of Impostors. The following table shows what each engine supports, and what it uses to simulate the missing impostors
+| Impostor Type | Cannon.js | Oimo.js | Energy.js | Ammo.js | Notes   |
+|---------------|-----------|---------|-----------|---------|---------|
+| Box           | Box       | Box     | Box       | Box     |         |
+| Sphere        | Sphere    | Sphere  | Sphere    | Sphere  |         |
+| Particle      | Particle  | Sphere  | Unknown   | Sphere  |         |
+| Plane         | Plane     | Box     | Plane     | Box     | Simulates an unlimited surface. Like a floor that never ends. Consider using Box |
+| Cylinder      | Cylinder  | Cylinder| Cylinder  | Cylinder|         |
+| Mesh          | Mesh      | Box     | Mesh      | Mesh    | Use only when necessary - will lower performance. Cannon's mesh impostor only collides against spheres and planes |
+| Heightmap     | Heightmap | Box     | Mesh      | Mesh    |         |
+| ConvexHull    | N/A       | N/A     | N/A       | Mesh    | Allows physics impostor support for convex mesh hull shapes |
+*/
+
 var IMPOSTER = {
   NoImpostor: 0,
   SphereImpostor: 1,
@@ -183,7 +200,7 @@ class RapierPlugin implements IPhysicsEnginePlugin {
   createLink(mesh1, mesh2, pivot1, pivot2) {}
 }
 
-//these 4 methods were in the 11 mandatory methods stated in the docs but not present in the IPhysicsEnginePlugin interface
+//these 4 methods were in the 10 mandatory methods stated in the docs but not present in the IPhysicsEnginePlugin interface
 //applyImpulse(mesh, force, contactPoint){}
 //setGravity(gravity){}
 //dispose(){}//isSupported(){}
