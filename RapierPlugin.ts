@@ -10,7 +10,7 @@ import type {
 } from "babylonjs"
 import { PhysicsRaycastResult } from "babylonjs/Physics/physicsRaycastResult"
 
-//enum used in the registerMesh method
+
 /**
 //https://doc.babylonjs.com/divingDeeper/physics/usingPhysicsEngine
 //https://github.com/BabylonJS/Documentation/blob/master/content/How_To/Physics/Using_The_Physics_Engine.md
@@ -27,6 +27,7 @@ Each physics engine has different types of Impostors. The following table shows 
 | ConvexHull    | N/A       | N/A     | N/A       | Mesh    | Allows physics impostor support for convex mesh hull shapes |
 */
 
+//enum used in the registerMesh method
 var IMPOSTER = {
   NoImpostor: 0,
   SphereImpostor: 1,
