@@ -10,6 +10,12 @@ import type {
 } from "babylonjs"
 import { PhysicsRaycastResult } from "babylonjs/Physics/physicsRaycastResult"
 
+import RAPIER from '@dimforge/rapier3d-compat';
+export type Rapier = typeof RAPIER;
+
+export function getRapier() {
+  return RAPIER.init().then(() => RAPIER);
+}
 
 /**
 //https://doc.babylonjs.com/divingDeeper/physics/usingPhysicsEngine
